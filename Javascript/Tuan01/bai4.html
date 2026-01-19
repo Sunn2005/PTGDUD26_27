@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 4 </title>
+</head>
+<body>
+
+    <script>
+        
+        console.log("=== Tính tiền tip ===\n");
+
+        console.log("--- Test 1: Bill = 275 ---");
+        let bill = 275;
+        
+        const tip = (bill >= 50 && bill <= 300) ? bill * 0.15 : bill * 0.2;
+        
+        const total = bill + tip;
+        
+        console.log(`Hoá đơn là ${bill}, tiền tip ${tip}, tổng ${total}`);
+        
+        
+        console.log("\n--- Test 2: Bill = 40 ---");
+        bill = 40;
+        const tip2 = (bill >= 50 && bill <= 300) ? bill * 0.15 : bill * 0.2;
+        const total2 = bill + tip2;
+        console.log(`Hoá đơn là ${bill}, tiền tip ${tip2}, tổng ${total2}`);
+        
+        
+        console.log("\n--- Test 3: Bill = 430 ---");
+        bill = 430;
+        const tip3 = (bill >= 50 && bill <= 300) ? bill * 0.15 : bill * 0.2;
+        const total3 = bill + tip3;
+        console.log(`Hoá đơn là ${bill}, tiền tip ${tip3}, tổng ${total3}`);
+        
+
+    </script>
+</body>
+</html>

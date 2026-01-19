@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 1</title>
+</head>
+<body>
+    <div>
+        <h3>BMI cua Mark</h3>
+        <div style="padding: 8px;">
+            <label for="">Can nang: </label>
+            <input type="text" name="" id="wMark" placeholder="Ví dụ: 78 (kg)">
+        </div>
+        <div style="padding: 8px;">
+             <label for="">Chieu cao: </label>
+            <input type="text" name="" id="hMark" placeholder="Ví dụ: 1.69 (m)">
+        </div>
+        
+
+        <h3>BMI cua John</h3>
+        <div style="padding: 8px;" >
+            <label for="">Can nang: </label>
+            <input type="text" name="" id="wJohn" placeholder="Ví dụ: 92 (kg)">
+        </div>
+        <div style="padding: 8px;" >
+             <label for="">Chieu cao: </label>
+            <input type="text" name="" id="hJohn" placeholder="Ví dụ: 1.95 (m)">
+        </div>
+       <button id="btnBMI">
+        Tinh BMI
+       </button>
+       
+       <div id="ketQua" style="margin-top: 20px; padding: 10px; background-color: #f0f0f0;">
+           <h3>Kết quả:</h3>
+           <p id="bmiMarkResult" style="font-weight: bold; color: #0066cc;"></p>
+           <p id="bmiJohnResult" style="font-weight: bold; color: #cc6600;"></p>
+           <hr>
+           <p id="result"></p>
+       </div>
+    </div>
+</body>
+
+<script>
+    function tinhBMI(){
+        const wMark = document.getElementById("wMark").value;
+        const hMark = document.getElementById("hMark").value;
+        const wJohn = document.getElementById("wJohn").value;
+        const hJohn = document.getElementById("hJohn").value;
+
+        const bmiMark = Number(wMark) / (Number(hMark) * Number(hMark));
+        const bmiJohn = Number(wJohn) / (Number(hJohn) * Number(hJohn));
+
+        document.getElementById("bmiMarkResult").innerHTML = `BMI của Mark: ${bmiMark.toFixed(2)}`;
+        document.getElementById("bmiJohnResult").innerHTML = `BMI của John: ${bmiJohn.toFixed(2)}`;
+
+        const resultElement = document.getElementById("result");
+        
+        if (bmiMark > bmiJohn) {
+            resultElement.innerHTML = `BMI của Mark (${bmiMark.toFixed(2)}) cao hơn BMI của John (${bmiJohn.toFixed(2)})`;
+        } else if (bmiJohn > bmiMark) {
+            resultElement.innerHTML = `BMI của John (${bmiJohn.toFixed(2)}) cao hơn BMI của Mark (${bmiMark.toFixed(2)})`;
+        } else {
+            resultElement.innerHTML = `BMI của Mark và John bằng nhau (${bmiMark.toFixed(2)})`;
+        }
+    }
+
+    document.getElementById("btnBMI").addEventListener("click", tinhBMI);
+</script>
+</html>

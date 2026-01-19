@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 3</title>
+</head>
+<body>
+    <script>
+        // Test data Bonus 2
+        const dolphinsScore1 = 97;
+        const dolphinsScore2 = 112;
+        const dolphinsScore3 = 101;
+
+        const koalasScore1 = 109;
+        const koalasScore2 = 95;
+        const koalasScore3 = 106;
+
+        console.log("====Dolphins===")
+        console.log("Dolphins Score 1: " + dolphinsScore1)
+        console.log("Dolphins Score 2:" + dolphinsScore2)
+        console.log("Dolphins Score 3:" + dolphinsScore3)
+
+        console.log("====Koalas===")
+        console.log("Koalas Score 1: " + koalasScore1)
+        console.log("Koalas Score 2: " + koalasScore2)
+        console.log("Koalas Score 3: " + koalasScore3)
+
+
+        const dolphinsAvg = (dolphinsScore1 + dolphinsScore2 + dolphinsScore3) / 3;
+
+        const koalasAvg = (koalasScore1 + koalasScore2 + koalasScore3) / 3;
+
+        const dolphinsRounded = dolphinsAvg.toFixed(1)
+        const koalasRounded = koalasAvg.toFixed(1)
+
+        console.log("=========")
+        console.log("Avg of Dolphins: " + dolphinsRounded)
+        console.log("Avg of Koalas: " + koalasRounded)
+
+
+        if (dolphinsAvg > koalasAvg && dolphinsAvg >= 100) {
+        console.log(`Dolphins win the trophy 🏆 (${dolphinsAvg.toFixed(1)} vs ${koalasAvg.toFixed(1)})`);
+        } else if (koalasAvg > dolphinsAvg && koalasAvg >= 100) {
+        console.log(`Koalas win the trophy 🏆 (${koalasAvg.toFixed(1)} vs ${dolphinsAvg.toFixed(1)})`);
+        } else if (
+        dolphinsAvg === koalasAvg &&
+        dolphinsAvg >= 100 &&
+        koalasAvg >= 100
+        ) {
+        console.log(`It's a draw 🤝 (${dolphinsAvg.toFixed(1)})`);
+        } else {
+        console.log("No team wins the trophy");
+        }
+
+    </script>
+</body>
+</html>

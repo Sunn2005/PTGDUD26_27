@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 2</title>
+</head>
+<body>
+    <script>
+        console.log("===Test===")
+        const markWeight = 78; 
+        console.log("Can nang: " + markWeight) 
+        const markHeight = 1.69; 
+        console.log("Chieu cao: " + markHeight) 
+        const johnWeight = 92; 
+        console.log("Can nang: " + johnWeight)   
+        const johnHeight = 1.95;
+        console.log("Chieu cao: " + johnHeight)  
+
+        
+        const markBMI = markWeight / (markHeight * markHeight);
+        const johnBMI = johnWeight / (johnHeight * johnHeight);
+
+        const markBMIRounded = markBMI.toFixed(1);
+        const johnBMIRounded = johnBMI.toFixed(1);
+
+        console.log("BMI cua Mark: " + markBMIRounded)
+        console.log("BMI cua John: " + johnBMIRounded)
+
+       
+
+        if (markBMI > johnBMI) {
+            console.log(`Mark's BMI (${markBMIRounded}) is higher than John's (${johnBMIRounded})!`);
+        } else if (johnBMI > markBMI) {
+            console.log(`John's BMI (${johnBMIRounded}) is higher than Mark's (${markBMIRounded})!`);
+        } else {
+            console.log("Mark and John have the same BMI (${markBMIRounded})!");
+        }
+    </script>
+</body>
+</html>
