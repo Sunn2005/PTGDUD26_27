@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 1 - Part 2</title>
+</head>
+<body>
+
+    <script>
+        // Bài 1: Tạo arrow function tính điểm trung bình
+        const calcAverage = (score1, score2, score3) => {
+            return (score1 + score2 + score3) / 3;
+        }
+
+        // Bài 3: Tạo function kiểm tra đội thắng
+        function checkWinner(avgDolphins, avgKoalas) {
+            // Kiểm tra Dolphins thắng (phải gấp đôi điểm Koalas)
+            if (avgDolphins >= 2 * avgKoalas) {
+                console.log(`Dolphins win (${avgDolphins} vs. ${avgKoalas})`);
+            } 
+            // Kiểm tra Koalas thắng (phải gấp đôi điểm Dolphins)
+            else if (avgKoalas >= 2 * avgDolphins) {
+                console.log(`Koalas win (${avgKoalas} vs. ${avgDolphins})`);
+            } 
+            else {
+                console.log(`No team wins!`);
+            }
+        }
+
+        // Bài 2 & 4: Test Data 1
+        console.log("--- Test Data 1 ---");
+        // Tính điểm trung bình Dolphins
+        let scoreDolphins = calcAverage(44, 23, 71);
+        // Tính điểm trung bình Koalas
+        let scoreKoalas = calcAverage(65, 54, 49);
+        console.log("Dolphins: " + scoreDolphins);
+        console.log("Koalas: " + scoreKoalas);
+        // Kiểm tra đội thắng
+        checkWinner(scoreDolphins, scoreKoalas);
+
+        console.log(""); // Xuống dòng
+
+        // Bài 2 & 4: Test Data 2
+        console.log("--- Test Data 2 ---");
+        // Tính điểm trung bình Dolphins
+        scoreDolphins = calcAverage(85, 54, 41);
+        // Tính điểm trung bình Koalas
+        scoreKoalas = calcAverage(23, 34, 27);
+        console.log("Dolphins: " + scoreDolphins);
+        console.log("Koalas: " + scoreKoalas);
+        // Kiểm tra đội thắng
+        checkWinner(scoreDolphins, scoreKoalas);
+    </script>
+</body>
+</html>

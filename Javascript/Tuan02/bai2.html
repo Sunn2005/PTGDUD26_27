@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bai 2 - Part 2</title>
+</head>
+<body>
+    
+    <script>
+        function calcTip(bill) {
+            if (bill >= 50 && bill <= 300) {
+                return bill * 0.15;
+            } else {
+                return bill * 0.20;
+            }
+        }
+
+        console.log("Test calcTip(100): " + calcTip(100));
+        console.log(""); 
+
+        const bills = [125, 555, 44];
+        console.log("Bills: " + bills);
+
+        const tips = [calcTip(bills[0]), calcTip(bills[1]), calcTip(bills[2])];
+        console.log("Tips: " + tips);
+
+        const total = [bills[0] + tips[0], bills[1] + tips[1], bills[2] + tips[2]];
+        console.log("Total: " + total);
+        console.log(""); 
+
+        // In chi tiết từng hóa đơn
+        console.log("--- Chi tiết ---");
+        console.log(`Bill 1: ${bills[0]}, Tip: ${tips[0]}, Total: ${total[0]}`);
+        console.log(`Bill 2: ${bills[1]}, Tip: ${tips[1]}, Total: ${total[1]}`);
+        console.log(`Bill 3: ${bills[2]}, Tip: ${tips[2]}, Total: ${total[2]}`);
+    </script>
+</body>
+</html>
