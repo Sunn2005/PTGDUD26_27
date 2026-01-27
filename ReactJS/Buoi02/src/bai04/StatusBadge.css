@@ -1,0 +1,19 @@
+.badge {
+  padding: 10px;
+  color: white;
+  width: 100px;
+  text-align: center;
+  border-radius: 8px;
+}
+
+.online {
+  background: green;
+}
+
+.offline {
+  background: gray;
+}
+
+.busy {
+  background: red;
+}
