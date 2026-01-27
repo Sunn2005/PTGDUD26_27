@@ -1,0 +1,26 @@
+.alert {
+  padding: 16px;
+  border-radius: 8px;
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: fadeIn 0.3s ease;
+}
+
+.alert-success { background: #2a9d8f; }
+.alert-error { background: #e63946; }
+.alert-warning { background: #f4a261; }
+
+.close {
+  background: none;
+  border: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-10px); }
+  to { opacity: 1; transform: translateY(0); }
+}
